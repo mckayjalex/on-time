@@ -6,7 +6,7 @@
 
 I work in the aviation industry and everything is time sensitive, we have the need to take down times for a majority of our activities.
 From the time the plane lands to the time we finish our last tasks, we are required to gather information on waht time of the day this occured. 
-Thsi is why i designed On Time, a easy to use mobile (Destop Also) based application.
+Thsi is why I designed On Time, a easy to use mobile (Destop Also) based application.
 With User login, history and fully functioning CRUD a user can log in, simply select a previous flight or add a new one, to which they will be entered into a screen with simple navigation to one click wonder. All it takes is one click and the time will be saved.
 
 ## Table of contents 

@@ -6,7 +6,7 @@ import { QUERY_FLIGHTS } from "../../utils/queries";
 
 
 const Flight = () => {
-  const { data, refetch } = useQuery(QUERY_FLIGHTS);
+  const { data, loading, refetch } = useQuery(QUERY_FLIGHTS);
   let flights;
   if (data) {
     flights = data?.flights || [];
@@ -19,7 +19,7 @@ const Flight = () => {
   
   return (
     <Center mt={0}>
-      <FlightListDrawer flights={flights} getFlights={refetch} />
+      <FlightListDrawer flights={flights} getFlights={refetch} load={loading} />
     </Center>
   );
 };

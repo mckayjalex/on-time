@@ -25,7 +25,7 @@ import { useLazyQuery, useMutation } from "@apollo/client";
 import { QUERY_SINGLE_FLIGHT } from "../utils/queries";
 import { CREATE_FLIGHT, DELETE_FLIGHT } from "../utils/mutations";
 
-const FlightListDrawer = ({ flights, getFlights }) => {
+const FlightListDrawer = ({ flights, getFlights, load }) => {
 
   // handle side menu
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -180,22 +180,22 @@ const FlightListDrawer = ({ flights, getFlights }) => {
               </StatNumber>
             </Stat>
             <Stat
-              as={GridItem}
-              colSpan={1}
-              px={{ base: 4, md: 8 }}
+              px={{ base: 3, md: 8 }}
               py={"2"}
               shadow={"xl"}
               border={"1px solid"}
               rounded={"lg"}
             >
               <StatLabel fontWeight={"medium"} isTruncated>
-                Flight No.
+                STA
               </StatLabel>
               <StatNumber
                 fontSize={{ base: "4xl", md: "6xl" }}
                 fontWeight={"medium"}
               >
-                {data === undefined ? "....." : data.flight.flightNo}
+                {data === undefined || data.flight.arrTime === ""
+                  ? "....."
+                  : data.flight.arrTime}
               </StatNumber>
             </Stat>
             <Stat
@@ -218,22 +218,22 @@ const FlightListDrawer = ({ flights, getFlights }) => {
               </StatNumber>
             </Stat>
             <Stat
-              px={{ base: 3, md: 8 }}
+              as={GridItem}
+              colSpan={1}
+              px={{ base: 4, md: 8 }}
               py={"2"}
               shadow={"xl"}
               border={"1px solid"}
               rounded={"lg"}
             >
               <StatLabel fontWeight={"medium"} isTruncated>
-                STA
+                Flight No.
               </StatLabel>
               <StatNumber
                 fontSize={{ base: "4xl", md: "6xl" }}
                 fontWeight={"medium"}
               >
-                {data === undefined || data.flight.arrTime === ""
-                  ? "....."
-                  : data.flight.arrTime}
+                {data === undefined ? "....." : data.flight.flightNo}
               </StatNumber>
             </Stat>
             <Stat
