@@ -40,6 +40,7 @@ const FlightListDrawer = ({ flights, getFlights, load }) => {
   const handleFlightDisplay = (event) => {
     const _id = event.target.value;
     getFlight({ variables: { _id } });
+    onClose()
   };
 
   // Handle form state
