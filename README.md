@@ -22,19 +22,28 @@ With User login, history and fully functioning CRUD a user can log in, simply se
 
 *Homepage*
 
-![Home]()
+![HomeLight](assets/home-light.png)
+![HomeDark](assets/home-dark.png)
 
-*Profile*
+*Login*
 
-![Profile]()
+![LoginLight](assets/login-light.png)
+![LoginDark](assets/login-dark.png)
+
+*Signup*
+
+![SignupLight](assets/signup-light.png)
+![SignupDark](assets/signup-dark.png)
 
 *Dashboard*
 
-![Dashboard]()
+![DashboardLight](assets/time-light.png)
+![DashboardDark](assets/time-dark.png)
 
 *Flights*
 
-![Flights]()
+![FlightLight](assets/flight-menu-light.png)
+![FlightDark](assets/flight-menu-dark.png)
 
 ## Technologies
 ***
