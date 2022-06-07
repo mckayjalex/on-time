@@ -69,11 +69,11 @@ const Login = () => {
         >
           <Stack spacing={4}>
             <FormControl id="email">
-              <FormLabel>Username</FormLabel>
+              <FormLabel fontSize={{ base: '12px', md: '18px'}}>Username</FormLabel>
               <Input type="username" name="username" onChange={handleChange} />
             </FormControl>
             <FormControl id="password">
-              <FormLabel>Password</FormLabel>
+              <FormLabel fontSize={{ base: '12px', md: '18px'}}>Password</FormLabel>
               <Input type="password" name="password" onChange={handleChange} />
             </FormControl>
             <Stack spacing={10}>

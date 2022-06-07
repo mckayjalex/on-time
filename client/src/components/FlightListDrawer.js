@@ -132,7 +132,7 @@ const FlightListDrawer = ({ flights, getFlights, load }) => {
   return (
     <>
       {loading ? (
-        <Spinner />
+        <Spinner mt={56} />
       ) : (
         <Box maxW="7xl" mx={"auto"} px={{ base: 2, sm: 12, md: 17 }}>
           <Grid
@@ -279,7 +279,7 @@ const FlightListDrawer = ({ flights, getFlights, load }) => {
           <DrawerHeader>Select Flight</DrawerHeader>
           <DrawerBody>
             <Stack>
-              {flights &&
+              { flights &&
                 flights.map((flight) => (
                   <FlightItem flightNo={flight.flightNo} val={flight._id} id={flight._id} />
                 ))}

@@ -47,7 +47,7 @@ const Signup = () => {
     return (
       <Flex
         bg={useColorModeValue('white', 'gray.800')}>
-        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+        <Stack spacing={6} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
             <Heading fontSize={'4xl'} textAlign={'center'}>
               Sign up
@@ -62,29 +62,29 @@ const Signup = () => {
               <HStack>
                 <Box>
                   <FormControl id="firstName" isRequired>
-                    <FormLabel>First Name</FormLabel>
+                    <FormLabel fontSize={{ base: '12px', md: '18px'}}>First Name</FormLabel>
                     <Input type="text" name='firstName' onChange={handleChange} />
                   </FormControl>
                 </Box>
                 <Box>
                   <FormControl id="lastName">
-                    <FormLabel>Last Name</FormLabel>
+                    <FormLabel fontSize={{ base: '12px', md: '18px'}}>Last Name</FormLabel>
                     <Input type="text" name='lastName' onChange={handleChange} />
                   </FormControl>
                 </Box>
                 <Box>
                   <FormControl id="username">
-                    <FormLabel>Username</FormLabel>
+                    <FormLabel fontSize={{ base: '12px', md: '18px'}}>Username</FormLabel>
                     <Input type="text" name='username' onChange={handleChange} />
                   </FormControl>
                 </Box>
               </HStack>
               <FormControl id="email" isRequired>
-                <FormLabel>Email address</FormLabel>
+                <FormLabel fontSize={{ base: '12px', md: '18px'}}>Email address</FormLabel>
                 <Input type="email" name='email' onChange={handleChange} />
               </FormControl>
               <FormControl id="password" isRequired>
-                <FormLabel>Password</FormLabel>
+                <FormLabel fontSize={{ base: '12px', md: '18px'}}>Password</FormLabel>
                 <InputGroup>
                   <Input type={showPassword ? 'text' : 'password'} name='password' onChange={handleChange} />
                   <InputRightElement h={'full'}>

@@ -1,4 +1,4 @@
-import { Box, Button, chakra, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, chakra, SimpleGrid, Spinner, Stack, Text } from "@chakra-ui/react";
 import { QUERY_RESULTS_BY_USER } from "../../utils/queries";
 import { useMutation, useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
@@ -101,8 +101,8 @@ const ResultHistory = () => {
         Get Times...
       </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-        {results
-          ? results.map((result) => (
+        {results ?
+          results.map((result) => (
               <ResultItem
                 flightNo={result.flightNo}
                 createdAt={result.createdAt}
@@ -110,7 +110,7 @@ const ResultHistory = () => {
                 deptTime={result.deptTime}
               />
             ))
-          : null}
+          : <Spinner ml={{ base: '200px',md: '600px'}} mt={{ base: '100px',md: '200px'}}/>}
       </SimpleGrid>
     </Box>
   );

@@ -22,7 +22,7 @@ import { MdOutlineEmojiPeople } from "react-icons/md";
 import { AiOutlineFileDone } from "react-icons/ai";
 import { IoMdFlashlight } from "react-icons/io";
 import { QUERY_SINGLE_RESULT } from "../../utils/queries";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Feature = ({ text, icon, iconBg, time }) => {
   return (
@@ -60,7 +60,6 @@ const Result = () => {
     },
   });
 
-  const [loadState] = useState(loading);
   const result = data?.result || {};
   const deptTime = result.deptTime;
   const offChocks = result.offChocks;
@@ -71,7 +70,7 @@ const Result = () => {
 
   return (
     <Center py={2} bgColor={late() ? "red.600" : "green.600"}>
-      {loadState ? (
+      {loading || result ? (
         <SimpleGrid columns={2} spacing={4}>
           <Container>
             <Stack>
