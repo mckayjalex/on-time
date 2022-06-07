@@ -1,0 +1,17 @@
+[
+    {
+        "origin": "adl",
+        "destination": "hba",
+        "flightNo": "qf1982",
+        "rego": "vhxfl",
+        "deptTime": "08:10"
+    },
+    {
+        "origin": "adl",
+        "destination": "asp",
+        "flightNo": "qf1954",
+        "rego": "vhuyb",
+        "deptTime": "06:05"
+    }
+]
+   
